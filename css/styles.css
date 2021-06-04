@@ -82,6 +82,7 @@ body {
   letter-spacing: 0.09em;
   text-transform: uppercase;
   cursor: pointer;
+  background-color: transparent;
 
   /* color: #ffffff; */
 }
@@ -113,13 +114,37 @@ body {
 }
 
 .suptitle {
+  display: flex;
+  align-items: center;
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-bottom: 20px;
-  /* color: rgba(157, 164, 189, 0.6); */
+}
+
+.suptitle::before {
+  content: "";
+  width: 60px;
+  height: 1px;
+  margin-right: 20px;
+}
+
+.suptitle-theme-dark {
+  color: rgba(157, 164, 189, 0.6);
+}
+
+.suptitle-theme-dark::before {
+  background-color: rgba(157, 164, 189, 0.6);
+}
+
+.suptitle-theme-light {
+  color: #303030;
+}
+
+.suptitle-theme-light::before {
+  background-color: #303030;
 }
 
 .description {
@@ -131,12 +156,51 @@ body {
   /* color: #9da4bd; */
 }
 
+.description-theme-dark {
+  color: #9da4bd;
+}
+
+.description-theme-light {
+  color: #555555;
+}
+
 .title {
   font-family: var(--secondary-font);
   font-size: 42px;
   line-height: 1.17;
   letter-spacing: 0.05em;
   /* color: #303030; */
+}
+
+.social-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-list-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.social-list-link:hover,
+.social-list-link:focus {
+  background-color: #303030;
+}
+
+.social-list-icon {
+  width: 20px;
+  height: 20px;
+  fill: #303030;
+}
+
+.social-list-link:hover .social-list-icon,
+.social-list-link:focus .social-list-icon {
+  fill: var(--accent-color);
 }
 /* ============== END COMPONENTS ============== */
 
@@ -145,6 +209,7 @@ body {
   padding-top: 32px;
   padding-bottom: 32px;
 }
+
 .navigation {
   display: flex;
   align-items: center;
@@ -152,6 +217,11 @@ body {
 
 .logo {
   margin-right: 70px;
+}
+
+.logo-img {
+  width: 68px;
+  height: 54px;
 }
 
 .menu {
@@ -206,6 +276,12 @@ body {
   padding-bottom: 206px;
   flex-grow: 1;
   background-color: #303030;
+  background-image: linear-gradient(
+      rgba(25, 28, 38, 0.2),
+      rgba(25, 28, 38, 0.2)
+    ),
+    url("../images/hero/bg.jpg");
+  background-size: cover;
 }
 
 .hero-title {
@@ -214,7 +290,7 @@ body {
   line-height: 1.18;
   letter-spacing: 0.05em;
   margin-bottom: 20px;
-  /* color: #ffffff; */
+  color: #ffffff;
 }
 
 .hero-description {
@@ -354,6 +430,10 @@ body {
 /* ============== END ADVANTAGES ============== */
 
 /* ============== MASTERS ============== */
+.masters {
+  background-color: #f7f7f7;
+}
+
 .masters-title {
   margin-bottom: 44px;
 }
@@ -376,6 +456,8 @@ body {
 
 .masters-list-content {
   padding-top: 30px;
+  padding-left: 82px;
+  padding-right: 82px;
 }
 
 .masters-list-name {
@@ -395,6 +477,7 @@ body {
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--accent-color);
+  margin-bottom: 30px;
 }
 /* ============== END MASTERS ============== */
 
