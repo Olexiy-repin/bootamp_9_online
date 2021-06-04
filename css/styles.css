@@ -83,8 +83,6 @@ body {
   text-transform: uppercase;
   cursor: pointer;
   background-color: transparent;
-
-  /* color: #ffffff; */
 }
 
 .modal-btn:hover,
@@ -93,8 +91,26 @@ body {
   color: #ffffff;
 }
 
+.modal-btn-theme-light {
+  color: #303030;
+}
+
+.modal-btn-theme-dark {
+  color: #ffffff;
+}
+
 .social-links-list {
   display: flex;
+  align-items: center;
+}
+
+.social-links-list::before {
+  content: "";
+  flex-shrink: 0;
+  width: 60px;
+  height: 1px;
+  background-color: #303030;
+  margin-right: 40px;
 }
 
 .social-liks-list-item:not(:last-child) {
@@ -152,8 +168,6 @@ body {
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
-
-  /* color: #9da4bd; */
 }
 
 .description-theme-dark {
@@ -169,7 +183,14 @@ body {
   font-size: 42px;
   line-height: 1.17;
   letter-spacing: 0.05em;
-  /* color: #303030; */
+}
+
+.title-theme-dark {
+  color: #ffffff;
+}
+
+.title-theme-light {
+  color: #303030;
 }
 
 .social-list {
@@ -338,6 +359,12 @@ body {
 /* ============== END ABOUT ============== */
 
 /* ============== SERVICES ============== */
+.services {
+  background-color: #111319;
+  background-image: url("../images/services/bg.png");
+  background-size: cover;
+}
+
 .services-modal-btn {
   display: block;
   margin: 0 auto;
@@ -355,17 +382,43 @@ body {
 .services-list {
   flex-basis: 50%;
   padding: 30px 40px;
-  border: 1px solid #303030;
+  background-image: linear-gradient(
+    180deg,
+    #171a24 0%,
+    rgba(23, 26, 36, 0.2) 100%
+  );
+}
+
+.services-list:nth-child(4n - 1),
+.services-list:nth-child(4n - 2) {
+  background-image: linear-gradient(
+    180deg,
+    #090b13 0%,
+    rgba(9, 11, 19, 0.2) 100%
+  );
 }
 
 .services-list-item {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
   color: #9da4bd;
+}
+
+.services-list-name {
+  order: -1;
+}
+
+.services-list-item::before {
+  content: "";
+  flex-grow: 1;
+  height: 1px;
+  margin: 0 6px;
+  background-color: rgba(157, 164, 189, 0.12);
 }
 
 .services-list-item:not(:last-child) {
@@ -396,7 +449,7 @@ body {
 .advantages-list-item {
   width: 170px;
   padding: 20px;
-  border: 1px solid teal;
+  background-color: #f7f7f7;
 }
 
 .advantages-list-item:nth-child(odd) {
