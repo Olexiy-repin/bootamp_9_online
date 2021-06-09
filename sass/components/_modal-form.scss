@@ -1,0 +1,123 @@
+.modal-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-form-head {
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.modal-form-field {
+  font-weight: 400;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.modal-form-input-wrapper {
+  display: block;
+  position: relative;
+  margin-top: 6px;
+}
+
+.modal-form-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding-left: 42px;
+  transition: border-color 250ms linear;
+
+  &:focus {
+    outline: none;
+    border-color: var(--accent-color);
+  }
+}
+
+.modal-form-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  display: block;
+  width: 18px;
+  height: 18px;
+  background-color: teal;
+  transition: background-color 250ms linear;
+
+  .modal-form-input:focus + & {
+    background-color: var(--accent-color);
+  }
+}
+
+.modal-form-message {
+  width: 100%;
+  height: 120px;
+  margin-top: 6px;
+  padding: 15px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: none;
+  transition: border-color 250ms linear;
+
+  &::placeholder {
+    text-transform: uppercase;
+    color: rgba(85, 85, 85, 0.5);
+  }
+
+  &:focus {
+    outline: none;
+    border-color: var(--accent-color);
+  }
+}
+
+.modal-form-checkbox-desc {
+  font-weight: 400;
+  font-size: 14px;
+  margin-bottom: 20px;
+
+  &::before {
+    display: inline-block;
+    vertical-align: middle;
+    content: "";
+    width: 18px;
+    height: 18px;
+    border: 1px solid #303030;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+
+    .modal-form-check:checked + & {
+      background-color: var(--accent-color);
+      box-shadow: inset 0 0 0 4px #ffffff;
+    }
+
+    .modal-form-check:focus + & {
+      outline: 2px solid blue;
+      outline-offset: 1px;
+    }
+  }
+}
+
+.modal-form-btn {
+  align-self: center;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  padding: 12px 38px;
+  background-color: transparent;
+  border: 1px solid var(--accent-color);
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 250ms linear, color 250ms linear;
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    color: #ffffff;
+  }
+}
