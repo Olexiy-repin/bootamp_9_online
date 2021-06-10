@@ -447,7 +447,7 @@ body {
   color: var(--accent-color);
 }
 
-.hero-container {
+.hero_container {
   display: flex;
 }
 
