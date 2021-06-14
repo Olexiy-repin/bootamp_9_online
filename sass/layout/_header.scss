@@ -1,37 +1,80 @@
 .header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  background-color: #303030;
+  padding-top: 40px;
+  padding-bottom: 40px;
 
   &__container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
   }
+}
 
-  &__nav {
-    display: flex;
-    align-items: center;
-  }
+@media screen and (max-width: 767px) {
+  .header {
+    &__tel {
+      display: none;
+    }
 
-  &__logo {
-    margin-right: 70px;
-  }
+    &__modal-btn {
+      display: none;
+    }
 
-  &__tel {
-    font-size: 12px;
-    line-height: 1.33;
-    letter-spacing: 0.1em;
-    margin-left: auto;
-    margin-right: 40px;
-    color: #ffffff;
-    transition: color 250ms linear;
+    &__mobile-btn {
+      padding: 0;
+      border: none;
+      background-color: transparent;
+    }
 
-    &:hover,
-    &:focus {
-      color: var(--accent-color);
+    &__burger-icon {
+      width: 40px;
+      height: 40px;
+      fill: #ffffff;
     }
   }
 }
+
+@media screen and (min-width: 768px) {
+  .header {
+    &__mobile-btn {
+      display: none;
+    }
+  }
+}
+// .header {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   padding-top: 32px;
+//   padding-bottom: 32px;
+
+//   &__container {
+//     display: flex;
+//     align-items: center;
+//   }
+
+//   &__nav {
+//     display: flex;
+//     align-items: center;
+//   }
+
+//   &__logo {
+//     margin-right: 70px;
+//   }
+
+//   &__tel {
+//     font-size: 12px;
+//     line-height: 1.33;
+//     letter-spacing: 0.1em;
+//     margin-left: auto;
+//     margin-right: 40px;
+//     color: #ffffff;
+//     transition: color 250ms linear;
+
+//     &:hover,
+//     &:focus {
+//       color: var(--accent-color);
+//     }
+//   }
+// }
